@@ -60,7 +60,7 @@
 
 // Settings
 
-const items = ["an Engineer", "a Aesthetic voyager", "a Dreamer", "a Learner","a Traveler", "an Adventurer"];
+const items = ["an Engineer", "a Aesthetic voyager", "a Dreamer", "a Learner","a Traveller", "an Adventurer"];
 const delSpeed = 55;
 const typeSpeed = 200;
 const targetElm = ".type";
