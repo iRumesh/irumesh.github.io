@@ -72,7 +72,7 @@ function resetForm(withKittens){
 		), {duration: 100}
 
 		setTimeout(function(){
-			window.location.replace("home");
+			window.location.replace("home/index.html");
 		}, (lines.length * 100) + 1000);
 	}
 
