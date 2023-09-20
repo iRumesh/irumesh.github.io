@@ -4373,10 +4373,6 @@ input[type=button].btn-block {
   border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
-.video {
-  width: 350px;
-  height: auto;
-}
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
