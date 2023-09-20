@@ -103,7 +103,7 @@ const Reminder = () => {
             React.createElement("i", { className: "fa-regular fa-pen-nib" })),
         React.createElement("span", { className: "reminder-text" },
             "This Blog Maintained by Rumesh, ",
-            React.createElement("span", { className: "reminder-time" }, "Happy Reading!, If my words are against your belief, Ignore it"))));
+            React.createElement("span", { className: "reminder-time" }, "Happy Reading!"))));
 };
 const Time = () => {
     const date = useCurrentDateEffect();
@@ -232,9 +232,6 @@ const QuickNav = () => {
                 label: "Travel"
             }, {
                 id: 8,
-                label: "Thoughts"
-            }, {
-                id: 8,
                 label: "Photography"
             }].map((item) => {
             return (React.createElement("div", { key: item.id, className: "quick-nav-item clear-button" },
@@ -310,21 +307,21 @@ const Tools = () => {
                 icon: "fa-solid fa-cloud-sun",
                 id: 1,
                 image: "https://images.unsplash.com/photo-1492011221367-f47e3ccd77a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYXRoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-                label: "Messaging and Notes",
-                name: "Signal,Telegram &\n Notion"
+                label: "Weather",
+                name: "Cloudly"
             }, {
                 icon: "fa-solid fa-calculator-simple",
                 id: 2,
                 image: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FsY3VsYXRvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-                label: "Word Processing",
-                name: "Latex, MS Office, Libre Office"
+                label: "Calc",
+                name: "Mathio"
             }, {
                 icon: "fa-solid fa-piggy-bank",
                 id: 3,
                 image: "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmFua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-                label: "Web Browser",
-                name: "Brave, Firefox, Tor"
-        /*    }, {
+                label: "Bank",
+                name: "Cashy"
+            }, {
                 icon: "fa-solid fa-plane",
                 id: 4,
                 image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWlycGxhbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
@@ -335,19 +332,19 @@ const Tools = () => {
                 id: 5,
                 image: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dmlkZW8lMjBnYW1lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
                 label: "Games",
-                name: "Gamey"	*/
+                name: "Gamey"
             },{
                 icon: "fa-solid fa-gamepad-modern",
-                id: 6,
+                id: 5,
                 image: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dmlkZW8lMjBnYW1lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
                 label: "Games",
-                name: "Commandoes, COD, Assassin's Creed"
+                name: "Gamey"
             }, {
                 icon: "fa-solid fa-video",
                 id: 6,
                 image: "https://images.unsplash.com/photo-1578022761797-b8636ac1773c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHZpZGVvJTIwY2hhdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-                label: "Video/Music Player",
-                name: "VLC, POT player"
+                label: "Video Chat",
+                name: "Chatty"
             }].map((tool) => {
             const styles = {
                 backgroundImage: `url(${tool.image})`
@@ -361,70 +358,45 @@ const Tools = () => {
                     React.createElement("i", { className: classNames(tool.icon, "tool-card-icon") }))));
         });
     };
-    return (React.createElement(MenuSection, { icon: "fa-solid fa-toolbox", id: "tools-section", title: "Softwares I Use/Recommend" }, getTools()));
+    return (React.createElement(MenuSection, { icon: "fa-solid fa-toolbox", id: "tools-section", title: "What's Appening?" }, getTools()));
 };
 const Restaurants = () => {
     const getRestaurants = () => {
         return [{
-                desc: "The Batman Triology, The big short, Ford v Ferrari, American Hustle, The Fighter, 3:10 to Yuma, The Prestige, Rescue Dawn, The Machinist, American Psycho, Empire of the Sun",
+                desc: "The best burgers in town",
                 id: 1,
-                image: "https://www.masala.com/cloud/2021/07/28/heCG7VcP-christian.jpg.jpg",
-                title: "Christian Bale"
+                image: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+                title: "Burgers"
             },{
-                desc: "Nightcrawler, Zodiac, Prisoners, October Sky, Source Code, Demolition, Stronger, Love & Other Drugs ",
+                desc: "The best burgers in town",
+                id: 1,
+                image: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+                title: "Burgers"
+            },{
+                desc: "The best burgers in town",
+                id: 1,
+                image: "https://images.unsplash.com/photo-1606131731446-5568d87113aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+                title: "Burgers"
+            }, {
+                desc: "The worst ice-cream around",
                 id: 2,
-                image: "https://d4gvcu3i34zpu.cloudfront.net/media/images/postfull-834dea1b-1597-46ce-8018-5.2e16d0ba.fill-752x424.png",
-                title: "Jake Gyllenhaal"
-            },{
-                desc: "Pirates of the Caribbean, Rango, The Lone Ranger, Public Enemies",
+                image: "https://images.unsplash.com/photo-1576506295286-5cda18df43e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aWNlJTIwY3JlYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+                title: "Ice Cream"
+            }, {
+                desc: "This 'Za be gettin down",
                 id: 3,
-                image: "https://akns-images.eonline.com/eol_images/Entire_Site/201553/rs_634x1043-150603082958-634-johnny-depp-new-face-dior.ls.6315.jpg?fit=around%7C634:1043&output-quality=90&crop=634:1043;center,top",
-                title: "Johnny Depp"
-            }, {
-                desc: "Catch Me If You Can, The wolf of wallstreet, The Revenant, Django Unchained, ",
+                image: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+                title: "Pizza"
+            },{
+                desc: "This 'Zadadf be gettin down",
                 id: 4,
-                image: "https://wallpaperaccess.com/full/1271797.jpg",
-                title: "Leonardo DiCaprio"
+                image: "https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+                title: "Pizza"
             }, {
-                desc: "Into the wild, Beautiful Mind, Her, The Perks Of Being A Wallflower, Get Out, Movies based Nicholas Sparks's Works",
+                desc: "BBQ ain't need no rhyme",
                 id: 5,
-                image: "",
-                title: "Other Favs"
-            }, {
-                desc: "Hugh Jackman, Andrew Garfield, Tom Hanks, Ryan Reynolds, Brad Pitt, Anne Hathaway ",
-                id: 6,
-                image: "",
-                title: "Other Favs Actors"
-            }, {
-                desc: "Inception, The Dark Knight Triology, Interstellar, Tenet, The Prestige, Memento",
-                id: 6,
-                image: "https://img.indiaforums.com/person/480x360/1/3713-christopher-nolan.jpg",
-                title: "Christopher Nolan"
-            },{
-                desc: "Ready Player One, The Adventures of Tintin, The Terminal, Catch Me If You Can, Minority Report, Saving Private Ryan,  ",
-                id: 7,
-                image: "https://www.goldenglobes.com/sites/default/files/styles/4_3_large/public/2021-12/01-steven-spielberg-gettyimages-1357807562.jpg?format=pjpg&auto=webp&optimize=high&itok=b0sRwaFB",
-                title: "Steven Spielberg"
-            },{
-                desc: "Fightclub, The Social Network, Se7en, The Curious Case of Benjamin Button, Gone Girl ",
-                id: 8,
-                image: "https://filmdaily.co/wp-content/uploads/2018/06/david-fincher-1300x720.jpg",
-                title: "David Fincher"
-            },{
-                desc: "The Wolf of Wall Street, Silence, Shutter Island, The Departed, Goodfellas, 	Taxi Driver",
-                id: 9,
-                image: "https://www.sensesofcinema.com/wp-content/uploads/2002/05/Martin-Scorsese.png",
-                title: "Martin Scorsese"
-            }, {
-                desc: "Sherlock Holmes, Aladdin, The Gentlemen, Wrath of Man",
-                id: 10,
-                image: "https://consequence.net/wp-content/uploads/2015/08/ritchie.jpg?quality=80&w=1005&h=580&crop=1&resize=1031%2C580&strip",
-                title: "Guy Ritchie"
-            }, {
-                desc: "Once Upon a Time in Hollywood, 	The Hateful Eight, Django Unchained, Inglourious Basterds, Kill Bill: Volume 1,2, Pulp Fiction, Reservoir Dogs",
-                id: 11,
-                image: "https://the-talks.com/wp-content/uploads/2013/10/Quentin-Tarantino-01-1460x760.jpg",
-                title: "Quentin Tarantino"
+                image: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmFyYmVxdWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+                title: "BBQ"
             }].map((restaurant) => {
             const styles = {
                 backgroundImage: `url(${restaurant.image})`
@@ -436,67 +408,63 @@ const Restaurants = () => {
                         React.createElement("span", { className: "restaurant-card-desc" }, restaurant.desc)))));
         });
     };
-    return (React.createElement(MenuSection, { icon: "fa-solid fa-camera-movie", id: "restaurants-section", title: "My Favourite Actors, Directors and Movies" }, getRestaurants()));
+    return (React.createElement(MenuSection, { icon: "fa-regular fa-pot-food", id: "restaurants-section", title: "Get it delivered!" }, getRestaurants()));
 };
 const Movies = () => {
     const getMovies = () => {
         return [{
-                desc: "“The only true wisdom is in knowing you know nothing.” ― Socrates.",
+                desc: "A tale of some people watching over a large portion of space.",
                 id: 1,
                 icon: "fa-solid fa-galaxy",
-                //image: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-                image: "https://images.pexels.com/photos/6353764/pexels-photo-6353764.jpeg?cs=srgb&dl=pexels-anete-lusina-6353764.jpg&fm=jpg",
-                title: "Are we really Intelligent?!"
-
-            },{
-                desc: "Sleeping?, wow congrats.",
-                id: 2,
-                icon: "fa-solid fa-galaxy",
-                //image: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-                image: "https://images.unsplash.com/photo-1603421959777-cd88d8db3afd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80",
-                title: "What are your hobbies?"
+                image: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+                title: "Protectors of the Milky Way"
             },{
                 desc: "A tale of some people watching over a large portion of space.",
-                id: 3,
+                id: 1,
                 icon: "fa-solid fa-galaxy",
-                //image: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-                image: "https://images.unsplash.com/photo-1639300505533-9921527d6a50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80",
-                title: "Too many interests or distractions"
+                image: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+                title: "Protectors of the Milky Way"
+            },{
+                desc: "A tale of some people watching over a large portion of space.",
+                id: 1,
+                icon: "fa-solid fa-galaxy",
+                image: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+                title: "Protectors of the Milky Way"
             }, {
                 desc: "Some people leave their holes to disrupt some things.",
-                id: 4,
+                id: 2,
                 icon: "fa-solid fa-hat-wizard",
-                image: "",
+                image: "https://images.unsplash.com/photo-1535666669445-e8c15cd2e7d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9yZCUyMG9mJTIwdGhlJTIwcmluZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
                 title: "Hole People"
             },{
                 desc: "Some people leave their holes to disrupt some things.",
-                id: 5,
+                id: 2,
                 icon: "fa-solid fa-hat-wizard",
-                image: "",
+                image: "https://images.unsplash.com/photo-1535666669445-e8c15cd2e7d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9yZCUyMG9mJTIwdGhlJTIwcmluZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
                 title: "Hole People"
             },{
                 desc: "Some people leave their holes to disrupt some things.",
-                id: 6,
+                id: 2,
                 icon: "fa-solid fa-hat-wizard",
-                image: "",
+                image: "https://images.unsplash.com/photo-1535666669445-e8c15cd2e7d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9yZCUyMG9mJTIwdGhlJTIwcmluZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
                 title: "Hole People"
             }, {
                 desc: "A boy with a dent in his head tries to stop a bad guy. And by bad I mean bad at winning.",
-                id: 7,
+                id: 3,
                 icon: "fa-solid fa-broom-ball",
-                image: "",
+                image: "https://images.unsplash.com/photo-1632266484284-a11d9e3a460a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhcnJ5JTIwcG90dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
                 title: "Pot of Hair"
             }, {
                 desc: "boy with a dent in his head tries to stop a bad guy. And by bad I mean bad at winning.",
-                id: 8,
+                id: 4,
                 icon: "fa-solid fa-broom-ball",
-                image: "",
+                image: "https://images.unsplash.com/photo-1632266484284-a11d9e3a460a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhcnJ5JTIwcG90dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
                 title: "Pot of Hair"
             },{
                 desc: "A long drawn out story of some people fighting over some space. Cuz there isn't enough of it.",
-                id: 9,
+                id: 5,
                 icon: "fa-solid fa-starship-freighter",
-                image: "",
+                image: "https://images.unsplash.com/photo-1533613220915-609f661a6fe1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3RhciUyMHdhcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
                 title: "Area Fights"
             }].map((movie) => {
             const styles = {
@@ -511,9 +479,8 @@ const Movies = () => {
                         React.createElement("span", { className: "movie-card-desc" }, movie.desc)),
                     React.createElement("i", { className: movie.icon }))));
         });
-    }; 
-    return (React.createElement(MenuSection, { icon: "fa-solid fa-pen-field", id: "movies-section", scrollable: true, title: "Technical Articles & Thoughts (click and use arrow keys to navigate)"}, getMovies()));
-    //return (React.createElement(MenuSection, { icon: "fa-solid fa-camera-movie", id: "movies-section", scrollable: true, title: "Popcorn time!" }, getMovies()));
+    };
+    return (React.createElement(MenuSection, { icon: "fa-solid fa-camera-movie", id: "movies-section", scrollable: true, title: "Popcorn time!" }, getMovies()));
 };
 const UserStatusButton = (props) => {
     const { userStatus, setUserStatusTo } = React.useContext(AppContext);
@@ -534,15 +501,13 @@ const Menu = () => {
                     React.createElement("div", { className: "app-menu-content-header-section" },
                         React.createElement(UserStatusButton, { icon: "fa-solid fa-arrow-right-from-arc", id: "sign-out-button", userStatus: UserStatus.LoggedOut }))),
                 React.createElement(QuickNav, null),
-                //React.createElement("a", { id: "youtube-link", className: "clear-button", href: "https://www.youtube.com/c/Hyperplexed?sub_confirmation=1", target: "_blank" },
-                //    React.createElement("i", { className: "fa-brands fa-youtube" }),
-                //    React.createElement("span", null, "Hyperplexed")),
-				React.createElement(Movies, null),
-                
+                React.createElement("a", { id: "youtube-link", className: "clear-button", href: "https://www.youtube.com/c/Hyperplexed?sub_confirmation=1", target: "_blank" },
+                    React.createElement("i", { className: "fa-brands fa-youtube" }),
+                    React.createElement("span", null, "Hyperplexed")),
+                React.createElement(Weather, null),
                 React.createElement(Restaurants, null),
-				React.createElement(Tools, null),
-                React.createElement(Weather, null)
-                ))));
+                React.createElement(Tools, null),
+                React.createElement(Movies, null)))));
 };
 const Background = () => {
     const { userStatus, setUserStatusTo } = React.useContext(AppContext);
@@ -575,8 +540,3 @@ const App = () => {
             React.createElement(Loading, null))));
 };
 ReactDOM.render(React.createElement(App, null), document.getElementById("root"));
-
-
-
-
-

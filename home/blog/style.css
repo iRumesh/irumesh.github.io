@@ -160,7 +160,7 @@ body input, body h1, body h3, body a, body span {
   z-index: 1;
 }
 #app #app-background #app-background-image {
-   background-image: url("https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80");
+  background-image: url("https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80");
   height: 100%;
   transition: filter 250ms, transform 250ms;
   width: 100%;
@@ -333,7 +333,6 @@ body input, body h1, body h3, body a, body span {
 }
 #app #restaurants-section .menu-section-content {
   display: flex;
-  flex-wrap: wrap;
   gap: 1em;
 }
 #app #restaurants-section .menu-section-content .restaurant-card {
@@ -344,7 +343,7 @@ body input, body h1, body h3, body a, body span {
   max-height: 240px;
   position: relative;
   transition: transform 250ms;
-  width: 22%;
+  width: 25%;
 }
 #app #restaurants-section .menu-section-content .restaurant-card:hover {
   transform: translateY(-5px);
@@ -365,7 +364,7 @@ body input, body h1, body h3, body a, body span {
   margin: 20px;
   position: absolute;
   right: 0px;
-  text-align: left;
+  text-align: right;
   transition: margin 250ms;
 }
 #app #restaurants-section .menu-section-content .restaurant-card .restaurant-card-content .restaurant-card-content-items .restaurant-card-title {
@@ -436,7 +435,6 @@ body input, body h1, body h3, body a, body span {
 }
 #app #tools-section .menu-section-content {
   display: flex;
-  flex-wrap: wrap;
   gap: 1em;
 }
 #app #tools-section .menu-section-content .tool-card {
@@ -515,19 +513,6 @@ body input, body h1, body h3, body a, body span {
 #app #movies-section .menu-section-content #movie-card-4 .movie-card-content {
   background: linear-gradient(to top, rgba(42, 252, 152, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
 }
-#app #movies-section .menu-section-content #movie-card-5 .movie-card-content {
-  background: linear-gradient(to top, rgba(57, 73, 171, 0.4), transparent, rgba(0, 0, 0, 0.4));
-}
-#app #movies-section .menu-section-content #movie-card-6 .movie-card-content {
-  background: linear-gradient(to top, rgba(103, 58, 183, 0.4), transparent, rgba(0, 0, 0, 0.4));
-}
-#app #movies-section .menu-section-content #movie-card-7 .movie-card-content {
-  background: linear-gradient(to top, rgba(239, 83, 80, 0.4), transparent, rgba(0, 0, 0, 0.4));
-}
-#app #movies-section .menu-section-content #movie-card-8 .movie-card-content {
-  background: linear-gradient(to top, rgba(42, 252, 152, 0.4), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
-}
-
 #app #movies-section .menu-section-content .movie-card {
   background-color: #1e1e1e;
   border-radius: 10px;
@@ -535,8 +520,8 @@ body input, body h1, body h3, body a, body span {
   cursor: pointer;
   height: 40vw;
   max-height: 600px;
-  min-height: 480px;
-  min-width: 500px;
+  min-height: 460px;
+  min-width: 260px;
   overflow: hidden;
   position: relative;
   transition: transform 250ms;
@@ -778,6 +763,3 @@ body input, body h1, body h3, body a, body span {
     width: 100%;
   }
 }
-
-
-//Lines 336,439
