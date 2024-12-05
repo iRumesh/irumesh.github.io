@@ -9,7 +9,7 @@ var UserStatus;
 })(UserStatus || (UserStatus = {}));
 var Default;
 (function (Default) {
-    Default["PIN"] = "0000";
+    Default["PIN"] = "0007";
 })(Default || (Default = {}));
 var WeatherType;
 (function (WeatherType) {
@@ -94,16 +94,19 @@ const WeatherSnap = () => {
     const [temperature] = React.useState(N.rand(65, 85));
     return (React.createElement("span", { className: "weather" },
         React.createElement("i", { className: "weather-type", className: "fa-duotone fa-sun" }),
-        React.createElement("span", { className: "weather-temperature-value" }, temperature),
-        React.createElement("span", { className: "weather-temperature-unit" }, "\u00B0F")));
+        // React.createElement("span", { className: "weather-temperature-value" }, temperature),
+        // React.createElement("span", { className: "weather-temperature-unit" }, "\u00B0F")));
+        React.createElement("span", { className: "weather-temperature-unit" }, "You are not here by an accident")));
 };
 const Reminder = () => {
     return (React.createElement("div", { className: "reminder" },
         React.createElement("div", { className: "reminder-icon" },
-            React.createElement("i", { className: "fa-regular fa-pen-nib" })),
+            React.createElement("i", { className: "fa-solid fa-pen" })),
         React.createElement("span", { className: "reminder-text" },
-            "This Blog Maintained by Rumesh, ",
-            React.createElement("span", { className: "reminder-time" }, "Happy Reading!, If my words are against your belief, Ignore it"))));
+            "This Blog is Maintained by Rumesh, ",
+            // React.createElement("span", { className: "reminder-time" }, "Happy Reading!, If my words are against your belief, Ignore it"))));
+            React.createElement("span", { className: "reminder-time" }, "Happy Reading!"))));
+
 };
 const Time = () => {
     const date = useCurrentDateEffect();
@@ -189,7 +192,7 @@ const Pin = () => {
             React.createElement(PinDigit, { focused: pin.length === 2, value: pin[2] }),
             React.createElement(PinDigit, { focused: pin.length === 3, value: pin[3] })),
         React.createElement("h3", { id: "app-pin-label" },
-            "Enter PIN (0000) ",
+            "Enter PIN (0007) ",
             getErrorText(),
             " ",
             getCancelText())));
@@ -311,9 +314,9 @@ const Tools = () => {
                 id: 1,
                 image: "https://images.unsplash.com/photo-1492011221367-f47e3ccd77a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYXRoZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
                 label: "Messaging and Notes",
-                name: "Signal,Telegram &\n Notion"
+                name: "Signal,Telegram &\n Notion, Obsidian"
             }, {
-                icon: "fa-solid fa-calculator-simple",
+                icon: "fa-solid fa-pen-nib",
                 id: 2,
                 image: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FsY3VsYXRvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
                 label: "Word Processing",
@@ -337,7 +340,7 @@ const Tools = () => {
                 label: "Games",
                 name: "Gamey"	*/
             },{
-                icon: "fa-solid fa-gamepad-modern",
+                icon: "fa-solid fa-gamepad",
                 id: 6,
                 image: "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dmlkZW8lMjBnYW1lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
                 label: "Games",
@@ -366,14 +369,18 @@ const Tools = () => {
 const Restaurants = () => {
     const getRestaurants = () => {
         return [{
+                desc: "Wake Up Sid, Yeh Jawaani Hai Deewani, Tamasha, Rockstar, Barfi, Sanju, Ae Dil Hai Mushkil, Ajab Prem Ki Ghazab Kahani",                id: 0,
+                image: "https://i.ndtvimg.com/mt/movies/2012-09/barfi-english.jpg",
+                title: "Ranbir Kapoor"
+            },{
                 desc: "The Batman Triology, The big short, Ford v Ferrari, American Hustle, The Fighter, 3:10 to Yuma, The Prestige, Rescue Dawn, The Machinist, American Psycho, Empire of the Sun",
-                id: 1,
+                id: 0,
                 image: "https://www.masala.com/cloud/2021/07/28/heCG7VcP-christian.jpg.jpg",
                 title: "Christian Bale"
-            },{
-                desc: "Nightcrawler, Zodiac, Prisoners, October Sky, Source Code, Demolition, Stronger, Love & Other Drugs ",
+            },{   
+                desc: "Road House, Nightcrawler, Zodiac, Prisoners, October Sky, Source Code, Demolition, Stronger, Love & Other Drugs ",
                 id: 2,
-                image: "https://d4gvcu3i34zpu.cloudfront.net/media/images/postfull-834dea1b-1597-46ce-8018-5.2e16d0ba.fill-752x424.png",
+                image: "https://www.nme.com/wp-content/uploads/2024/03/jake-gyllenhaal@2000x1270-696x442.jpg",
                 title: "Jake Gyllenhaal"
             },{
                 desc: "Pirates of the Caribbean, Rango, The Lone Ranger, Public Enemies",
@@ -386,16 +393,21 @@ const Restaurants = () => {
                 image: "https://wallpaperaccess.com/full/1271797.jpg",
                 title: "Leonardo DiCaprio"
             }, {
-                desc: "Into the wild, Beautiful Mind, Her, The Perks Of Being A Wallflower, Get Out, Movies based Nicholas Sparks's Works",
+                desc: "Into the wild, Beautiful Mind, Her, The Perks Of Being A Wallflower, Get Out, Movies based Nicholas Sparks's Works, Zindagi Na Milegi Dobara",
                 id: 5,
                 image: "",
-                title: "Other Favs"
+                title: "Other Favs Movies "
             }, {
                 desc: "Hugh Jackman, Andrew Garfield, Tom Hanks, Ryan Reynolds, Brad Pitt, Anne Hathaway ",
                 id: 6,
                 image: "",
                 title: "Other Favs Actors"
             }, {
+                desc: "Tamasha, Rockstar, Love aaj Kal, Highway, Jab Harry Met Sejal, Jab We Met, Cocktail",
+                id: 6,
+                image: "https://www.hindustantimes.com/ht-img/img/2024/06/15/1600x900/Imtiaz_Ali_1718453643432_1718453661762.jpg",
+                title: "Imitiaz Ali"
+            },{ 
                 desc: "Inception, The Dark Knight Triology, Interstellar, Tenet, The Prestige, Memento",
                 id: 6,
                 image: "https://img.indiaforums.com/person/480x360/1/3713-christopher-nolan.jpg",
@@ -403,7 +415,7 @@ const Restaurants = () => {
             },{
                 desc: "Ready Player One, The Adventures of Tintin, The Terminal, Catch Me If You Can, Minority Report, Saving Private Ryan,  ",
                 id: 7,
-                image: "https://www.goldenglobes.com/sites/default/files/styles/4_3_large/public/2021-12/01-steven-spielberg-gettyimages-1357807562.jpg?format=pjpg&auto=webp&optimize=high&itok=b0sRwaFB",
+                image: "https://static01.nyt.com/images/2022/11/13/arts/13STEVEN-SPIELBERG1/merlin_215976918_d78f73ff-0116-4890-93fa-005d52841f35-superJumbo.jpg?quality=75&auto=webp",
                 title: "Steven Spielberg"
             },{
                 desc: "Fightclub, The Social Network, Se7en, The Curious Case of Benjamin Button, Gone Girl ",
@@ -443,7 +455,7 @@ const Movies = () => {
         return [{
                 desc: "“The only true wisdom is in knowing you know nothing.” ― Socrates.",
                 id: 1,
-                icon: "fa-solid fa-galaxy",
+                icon: "fa-brands fa-empire",
                 //image: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
                 image: "https://images.pexels.com/photos/6353764/pexels-photo-6353764.jpeg?cs=srgb&dl=pexels-anete-lusina-6353764.jpg&fm=jpg",
                 title: "Are we really Intelligent?!"
@@ -451,14 +463,14 @@ const Movies = () => {
             },{
                 desc: "Sleeping?, wow congrats.",
                 id: 2,
-                icon: "fa-solid fa-galaxy",
+                icon: "fa-solid fa-dragon",
                 //image: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
                 image: "https://images.unsplash.com/photo-1603421959777-cd88d8db3afd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80",
                 title: "What are your hobbies?"
             },{
                 desc: "A tale of some people watching over a large portion of space.",
                 id: 3,
-                icon: "fa-solid fa-galaxy",
+                icon: "fa-solid fa-hat-wizard",
                 //image: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFydmVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
                 image: "https://images.unsplash.com/photo-1639300505533-9921527d6a50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80",
                 title: "Too many interests or distractions"
@@ -532,7 +544,7 @@ const Menu = () => {
                         React.createElement(Info, { id: "app-menu-info" }),
                         React.createElement(Reminder, null)),
                     React.createElement("div", { className: "app-menu-content-header-section" },
-                        React.createElement(UserStatusButton, { icon: "fa-solid fa-arrow-right-from-arc", id: "sign-out-button", userStatus: UserStatus.LoggedOut }))),
+                        React.createElement(UserStatusButton, { icon: "fa-solid fa-arrow-right-from-bracket", id: "sign-out-button", userStatus: UserStatus.LoggedOut }))),
                 React.createElement(QuickNav, null),
                 //React.createElement("a", { id: "youtube-link", className: "clear-button", href: "https://www.youtube.com/c/Hyperplexed?sub_confirmation=1", target: "_blank" },
                 //    React.createElement("i", { className: "fa-brands fa-youtube" }),
@@ -541,7 +553,7 @@ const Menu = () => {
                 
                 React.createElement(Restaurants, null),
 				React.createElement(Tools, null),
-                React.createElement(Weather, null)
+                // React.createElement(Weather, null)
                 ))));
 };
 const Background = () => {
@@ -571,11 +583,10 @@ const App = () => {
             React.createElement(Menu, null),
             React.createElement(Background, null),
             React.createElement("div", { id: "sign-in-button-wrapper" },
-                React.createElement(UserStatusButton, { icon: "fa-solid fa-arrow-right-to-arc", id: "sign-in-button", userStatus: UserStatus.LoggingIn })),
+                React.createElement(UserStatusButton, { icon: "fa-solid fa-arrow-right-to-bracket", id: "sign-in-button", userStatus: UserStatus.LoggingIn })),
             React.createElement(Loading, null))));
 };
 ReactDOM.render(React.createElement(App, null), document.getElementById("root"));
-
 
 
 
